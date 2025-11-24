@@ -44,7 +44,7 @@ jobs:
         run: npx cypress verify
 
       - name: Run tests and generate report
-        run: npm run report:all
+        run: npx cypress run--reporter cypress-mochawesome-reporter
         env:
           CI: true
 
