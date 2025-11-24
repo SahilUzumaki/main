@@ -1,0 +1,25 @@
+
+{
+  "logindata":
+  {
+  "username": "Admin",
+  "password": "admin123",
+  "invalidUsername": "InvalidUser",
+  "invalidPassword": "invalidPass"
+},
+
+"errormsg":
+{
+  "invalidCredentials": "Invalid credentials" 
+
+},
+"usermanagement":{
+  "userroleESS": "ESS",
+  "userroleAdmin": "Admin",
+  "employeeName": "Ranga Akunuri",
+  "status": "Enabled",
+  "username": "Ranga.Akunuri21",
+  "password": "Password123!",
+  "confirmPassword": "Password123!"
+}
+}
