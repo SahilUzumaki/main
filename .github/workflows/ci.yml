@@ -48,7 +48,7 @@ jobs:
 
 
       - name: Run tests and generate report
-        run: npm run report:all
+        run: npm run cypress:run:reports
         env:
           CI: true
 
