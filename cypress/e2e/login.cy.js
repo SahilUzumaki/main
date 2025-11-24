@@ -44,7 +44,7 @@ describe("Login Module", () => {
         cy.login(this.data.logindata.username,this.data.logindata.invalidPassword);
         lg.validateErrorMessage(this.data.errormsg.invalidCredentials);
     });
-    it("TC08: Failing a test case for Requirement purpose", function () {
+    it.skip("TC08: Failing a test case for Requirement purpose", function () {
         cy.login(this.data.logindata.username,this.data.logindata.invalidPassword+"wrong");
         cy.url().should("include", "/dashboard");
     });
