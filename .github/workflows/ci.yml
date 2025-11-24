@@ -1,0 +1,39 @@
+name: CI - Run Cypress tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests and generate report
+        run: npm run report:all
+        env:
+          CI: true
+
+      - name: Upload test reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-reports
+          path: cypress/reports
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots

@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests and generate report
-        run: npm run report:all
+        run: npm run cypress:run:report
         env:
           CI: true
 
