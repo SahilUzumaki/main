@@ -6,6 +6,7 @@ describe("Login Module", () => {
         cy.fixture('example.json').then(function (data) {
             this.data = data;
         });
+        
         cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     });
 
