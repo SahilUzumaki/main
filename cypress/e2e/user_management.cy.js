@@ -9,7 +9,8 @@ describe("User Management Module", () => {
         cy.fixture('example.json').then(function (data) {
             this.data = data;
         
-        cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        // use relative path; baseUrl is set in cypress.config.js
+        cy.visit('/web/index.php/auth/login');
         cy.login(this.data.logindata.username, this.data.logindata.password);
     });
 });

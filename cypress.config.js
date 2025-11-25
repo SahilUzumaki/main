@@ -11,6 +11,8 @@ module.exports = defineConfig({
     inlineAssets: true
   },
   e2e: {
+    // set the application base URL here so tests can call `cy.visit('/path')`
+    baseUrl: 'https://opensource-demo.orangehrmlive.com',
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
     },
